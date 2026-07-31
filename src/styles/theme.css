@@ -1,0 +1,30 @@
+:root {
+  /* Backgrounds */
+  --background: #0f1117;
+  --surface: #1a1d24;
+  --card: #222632;
+
+  /* Brand */
+  --primary: #8b5cf6;
+  --primary-hover: #7c3aed;
+  --accent: #f4c542;
+
+  /* Text */
+  --text: #f5f5f5;
+  --text-secondary: #a6acb8;
+
+  /* Borders */
+  --border: #313543;
+
+  /* Status */
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Layout */
+  --container-width: 1280px;
+}

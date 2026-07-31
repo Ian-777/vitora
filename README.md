@@ -1,32 +1,85 @@
-# React + TypeScript + Vite
+# 💜 Vitora
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Build your professional presence.
 
-Currently, two official plugins are available:
+Vitora es una plataforma para crear y publicar una página profesional moderna a partir de un único perfil.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+En lugar de generar únicamente un currículum, Vitora permite construir una presencia profesional completa que puede compartirse mediante un enlace y, cuando sea necesario, convertirse en un CV optimizado para procesos de selección.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Objetivo
 
-## Expanding the Oxlint configuration
+Crear la forma más sencilla, elegante y profesional de presentar el perfil de una persona.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Un solo perfil.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+Múltiples formatos.
+
+- 🌐 Página profesional
+- 📄 Currículum PDF
+- 🔗 Enlace para compartir
+
+---
+
+## 🚀 Características
+
+- Vista previa en tiempo real.
+- Editor intuitivo por secciones.
+- Página profesional personalizable.
+- Exportación a PDF.
+- Arquitectura escalable.
+- Diseño minimalista.
+
+---
+
+## 🛠️ Stack tecnológico
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS v4
+- React Router
+- Zustand
+- React Hook Form
+- Zod
+- Lucide React
+- Supabase (próximamente)
+
+---
+
+## 📂 Arquitectura
+
+El proyecto utiliza una arquitectura **Feature-Based**, separando la lógica de negocio de los componentes reutilizables.
+
+```
+src/
+│
+├── app/
+├── features/
+├── shared/
+└── styles/
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## 🚀 Ejecutar el proyecto
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📅 Estado del proyecto
+
+Actualmente Vitora se encuentra en fase de desarrollo activo.
+
+La documentación completa se encuentra en la carpeta **docs/**.
+
+---
+
+## 📜 Licencia
+
+MIT License.
