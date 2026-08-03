@@ -39,19 +39,72 @@ export const profile: Profile = {
     "Tailwind CSS",
   ],
 
+  experience: [
+    {
+      position: "Full Stack Developer",
+      company: "Freelance",
+      location: "Remote",
+
+      startDate: "2025",
+
+      endDate: undefined,
+
+      current: true,
+
+      description:
+        "Designing and developing modern web applications with a focus on clean architecture, performance and user experience.",
+
+      technologies: [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+      ],
+    },
+    {
+      position: "Frontend Developer",
+
+      company: "Personal Projects",
+
+      location: "Bogotá, Colombia",
+
+      startDate: "2024",
+
+      endDate: "2025",
+
+      current: false,
+
+      description:
+        "Built responsive user interfaces and reusable component libraries while exploring modern frontend technologies.",
+
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+      ],
+    },
+  ],
+
   projects: [
     {
       title: "Vitora",
       description:
         "Personal website builder with CV export and shareable profile.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
       url: "https://vitora.app",
     },
     {
       title: "Wetlands App",
       description:
         "Mobile application to explore Colombian wetlands using interactive maps.",
-      technologies: ["React Native", "Firebase"],
+      technologies: [
+        "React Native",
+        "Firebase",
+      ],
       url: "",
     },
   ],

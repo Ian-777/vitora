@@ -11,8 +11,27 @@ export interface Project {
   url: string;
 }
 
+export interface Experience {
+  position: string;
+
+  company: string;
+
+  location: string;
+
+  startDate: string;
+
+  endDate?: string;
+
+  current: boolean;
+
+  description: string;
+
+  technologies: string[];
+}
+
 export interface Profile {
   name: string;
+
   title: string;
 
   about: string;
@@ -24,6 +43,8 @@ export interface Profile {
   socials: SocialLink[];
 
   skills: string[];
+
+  experience: Experience[];
 
   projects: Project[];
 }
