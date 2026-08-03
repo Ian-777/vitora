@@ -6,3 +6,4 @@ export * from "./typography";
 export * from "./tag";
 export * from "./avatar";
 export * from "./icon-button";
+export * from "./section";

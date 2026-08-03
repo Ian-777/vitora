@@ -1,11 +1,11 @@
-import { Typography } from "@/shared/ui";
+import { Section, Typography } from "@/shared/ui";
 
 import { profile } from "../profile.mock";
 import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
   return (
-    <section className="mt-8">
+    <Section>
       <Typography variant="h2">
         Projects
       </Typography>
@@ -18,6 +18,6 @@ export function Projects() {
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 }
