@@ -6,15 +6,17 @@ import { cn } from "@/shared/utils";
 interface IconButtonProps {
   icon: ReactNode;
   children: ReactNode;
+  href?: string;
   className?: string;
 }
 
 export function IconButton({
   icon,
   children,
+  href,
   className,
 }: IconButtonProps) {
-  return (
+  const content = (
     <Button
       variant="secondary"
       className={cn("gap-2", className)}
@@ -23,4 +25,19 @@ export function IconButton({
       {children}
     </Button>
   );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return content;
 }
