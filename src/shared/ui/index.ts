@@ -3,3 +3,6 @@ export * from "./button";
 export * from "./card";
 export * from "./section";
 export * from "./typography";
+export * from "./tag";
+export * from "./avatar";
+export * from "./icon-button";

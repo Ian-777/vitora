@@ -1,22 +1,12 @@
-import { Button, Card, Container, Section, Typography } from "@/shared/ui";
+//import { Hero } from "@/features/landing/components/Hero";
+import { Container } from "@/shared/ui";
+import { Website } from "./features/website/Website";
 
 function App() {
   return (
-    <main className="bg-[var(--background)] min-h-screen">
+    <main className="min-h-screen bg-[var(--background)]">
       <Container>
-        <Section>
-          <Card className="text-center">
-            <Typography variant="h1">Welcome to Vitora 💜</Typography>
-
-            <Typography variant="muted" className="mt-4">
-              Build your professional presence.
-            </Typography>
-
-            <div className="mt-8">
-              <Button loading>Create my profile</Button>
-            </div>
-          </Card>
-        </Section>
+        <Website />
       </Container>
     </main>
   );
