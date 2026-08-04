@@ -1,19 +1,22 @@
-import { Card, Section, Typography } from "@/shared/ui";
+import {
+  Card,
+  Section,
+  SectionTitle,
+  Typography,
+} from "@/shared/ui";
 
 import { profile } from "../profile.mock";
+import { sectionContent } from "../section-content";
 
 export function About() {
   return (
     <Section>
       <Card>
-        <Typography variant="h2">
-          About
-        </Typography>
+        <SectionTitle
+          {...sectionContent.about}
+        />
 
-        <Typography
-          variant="body"
-          className="mt-4"
-        >
+        <Typography variant="body">
           {profile.about}
         </Typography>
       </Card>

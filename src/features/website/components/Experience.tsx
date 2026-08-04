@@ -1,14 +1,21 @@
-import { Card, Section, Tag, Typography } from "@/shared/ui";
+import {
+  Card,
+  Section,
+  SectionTitle,
+  Tag,
+  Typography,
+} from "@/shared/ui";
 
 import { profile } from "../profile.mock";
+import { sectionContent } from "../section-content";
 
 export function Experience() {
   return (
     <Section>
       <Card>
-        <Typography variant="h2">
-          Experience
-        </Typography>
+        <SectionTitle
+          {...sectionContent.experience}
+        />
 
         <div className="mt-8 space-y-10">
           {profile.experience.map((experience, index) => (

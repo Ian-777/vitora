@@ -7,3 +7,4 @@ export * from "./tag";
 export * from "./avatar";
 export * from "./icon-button";
 export * from "./section";
+export * from "./section-title";

@@ -1,14 +1,20 @@
-import { Card, Section, Tag, Typography } from "@/shared/ui";
+import {
+  Card,
+  Section,
+  SectionTitle,
+  Tag,
+} from "@/shared/ui";
 
 import { profile } from "../profile.mock";
+import { sectionContent } from "../section-content";
 
 export function Skills() {
   return (
     <Section>
       <Card>
-        <Typography variant="h2">
-          Skills
-        </Typography>
+        <SectionTitle
+          {...sectionContent.skills}
+        />
 
         <div className="mt-6 flex flex-wrap gap-3">
           {profile.skills.map((skill) => (
