@@ -2,7 +2,7 @@ import { Header } from "./components/Header";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Experience } from "./components/experience";
-import { Projects } from "./components/Projects";
+import { Projects } from "./components/projects";
 
 export function Website() {
   return (
