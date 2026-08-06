@@ -5,15 +5,15 @@ import {
   Tag,
 } from "@/shared/ui";
 
+import { websiteContent } from "../content/website-content";
 import { profile } from "../profile.mock";
-import { sectionContent } from "../section-content";
 
 export function Skills() {
   return (
     <Section>
       <Card>
         <SectionTitle
-          {...sectionContent.skills}
+          {...websiteContent.skills}
         />
 
         <div className="mt-6 flex flex-wrap gap-3">

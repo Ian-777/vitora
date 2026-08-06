@@ -7,6 +7,7 @@ import {
 
 import { UiIcons } from "@/shared/icons";
 
+import { websiteContent } from "../content/website-content";
 import { profile } from "../profile.mock";
 import { socialIcons } from "../social-icons";
 
@@ -58,8 +59,10 @@ export function Header() {
           </div>
 
           <div className="mt-6 flex justify-center">
-            <IconButton icon={<UiIcons.download size={18} />}>
-              Download CV
+            <IconButton
+              icon={<UiIcons.download size={18} />}
+            >
+              {websiteContent.header.downloadCv}
             </IconButton>
           </div>
         </div>

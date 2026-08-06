@@ -10,6 +10,9 @@ import {
   UiIcons,
 } from "@/shared/icons";
 
+import { cn } from "@/shared/utils";
+
+import { websiteContent } from "../../content/website-content";
 import type { Project } from "../../profile/types";
 
 interface ProjectCardProps {
@@ -21,23 +24,44 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <Card
-      className="
-        flex
-        h-full
-        flex-col
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-[var(--primary)]
-        hover:shadow-xl
-      "
+      className={cn(
+        `
+          relative
+          flex
+          h-full
+          flex-col
+          transition-all
+          duration-500
+          hover:-translate-y-1
+        `,
+        project.featured
+          ? `
+              hover:border-amber-400
+              hover:shadow-[0_0_40px_rgba(251,191,36,0.18)]
+            `
+          : `
+              hover:border-[var(--primary)]
+              hover:shadow-xl
+            `
+      )}
     >
+      {project.featured && (
+        <div className="absolute right-5 top-5 rounded-full border border-amber-400/40 bg-amber-400/10 px-3 py-1 backdrop-blur-sm">
+          <Typography
+            variant="small"
+            className="font-semibold text-amber-400"
+          >
+            ★ {websiteContent.projects.featuredBadge}
+          </Typography>
+        </div>
+      )}
+
       <div className="mb-6 aspect-video overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--muted)]">
         {project.image ? (
           <img
             src={project.image}
             alt={project.title}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
           />
         ) : (
           <div className="flex h-full flex-col items-center justify-center gap-3 text-[var(--muted-foreground)]">

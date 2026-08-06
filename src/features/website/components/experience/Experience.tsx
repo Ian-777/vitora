@@ -4,8 +4,8 @@ import {
   SectionTitle,
 } from "@/shared/ui";
 
+import { websiteContent } from "../../content/website-content";
 import { profile } from "../../profile.mock";
-import { sectionContent } from "../../section-content";
 import { ExperienceItem } from "./ExperienceItem";
 
 export function Experience() {
@@ -13,7 +13,7 @@ export function Experience() {
     <Section>
       <Card>
         <SectionTitle
-          {...sectionContent.experience}
+          {...websiteContent.experience}
         />
 
         <div className="mt-8 space-y-10">

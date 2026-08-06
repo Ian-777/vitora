@@ -5,15 +5,15 @@ import {
   Typography,
 } from "@/shared/ui";
 
+import { websiteContent } from "../content/website-content";
 import { profile } from "../profile.mock";
-import { sectionContent } from "../section-content";
 
 export function About() {
   return (
     <Section>
       <Card>
         <SectionTitle
-          {...sectionContent.about}
+          {...websiteContent.about}
         />
 
         <Typography variant="body">
