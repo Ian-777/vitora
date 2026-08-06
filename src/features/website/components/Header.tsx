@@ -5,10 +5,7 @@ import {
   Typography,
 } from "@/shared/ui";
 
-import {
-  Download,
-  MapPin,
-} from "lucide-react";
+import { UiIcons } from "@/shared/icons";
 
 import { profile } from "../profile.mock";
 import { socialIcons } from "../social-icons";
@@ -37,7 +34,7 @@ export function Header() {
           </Typography>
 
           <div className="mt-4 flex items-center justify-center gap-2 text-[var(--muted-foreground)]">
-            <MapPin size={18} />
+            <UiIcons.mapPin size={18} />
 
             <Typography variant="body">
               {profile.location}
@@ -61,7 +58,7 @@ export function Header() {
           </div>
 
           <div className="mt-6 flex justify-center">
-            <IconButton icon={<Download size={18} />}>
+            <IconButton icon={<UiIcons.download size={18} />}>
               Download CV
             </IconButton>
           </div>

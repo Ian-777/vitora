@@ -6,9 +6,18 @@ export interface SocialLink {
 
 export interface Project {
   title: string;
+
   description: string;
+
   technologies: string[];
-  url: string;
+
+  github?: string;
+
+  demo?: string;
+
+  image?: string;
+
+  featured?: boolean;
 }
 
 export interface Experience {

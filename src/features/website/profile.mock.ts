@@ -88,24 +88,43 @@ export const profile: Profile = {
   projects: [
     {
       title: "Vitora",
+
       description:
-        "Personal website builder with CV export and shareable profile.",
+        "Personal website builder with customizable templates, live preview and PDF export.",
+
       technologies: [
         "React",
         "TypeScript",
         "Tailwind CSS",
       ],
-      url: "https://vitora.app",
+
+      github: "https://github.com/Ian-777/vitora",
+
+      demo: "",
+
+      image: "",
+
+      featured: true,
     },
+
     {
       title: "Wetlands App",
+
       description:
-        "Mobile application to explore Colombian wetlands using interactive maps.",
+        "Mobile application to explore Colombian wetlands through interactive maps and geolocation.",
+
       technologies: [
         "React Native",
         "Firebase",
       ],
-      url: "",
+
+      github: "",
+
+      demo: "",
+
+      image: "",
+
+      featured: false,
     },
   ],
 };

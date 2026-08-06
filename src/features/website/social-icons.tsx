@@ -1,8 +1,12 @@
-import { Globe } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  BrandIcons,
+  UiIcons,
+} from "@/shared/icons";
 
 export const socialIcons = {
-  github: <FaGithub size={18} />,
-  linkedin: <FaLinkedin size={18} />,
-  website: <Globe size={18} />,
+  github: <BrandIcons.github size={18} />,
+
+  linkedin: <BrandIcons.linkedin size={18} />,
+
+  website: <UiIcons.globe size={18} />,
 };
