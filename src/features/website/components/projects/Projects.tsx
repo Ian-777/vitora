@@ -10,6 +10,17 @@ import { FeaturedProjectCard } from "./FeaturedProjectCard";
 import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
+  const featuredProject = profile.projects.find(
+    (project) => project.featured
+  );
+
+  const regularProjects = profile.projects.filter(
+    (project) => !project.featured
+  );
+
+  const hasSingleRegularProject =
+    regularProjects.length === 1;
+
   return (
     <Section>
       <SectionTitle
@@ -17,23 +28,34 @@ export function Projects() {
       />
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {profile.projects.map((project) =>
-          project.featured ? (
-            <div
-              key={project.title}
-              className="md:col-span-2"
-            >
-              <FeaturedProjectCard
-                project={project}
-              />
-            </div>
-          ) : (
-            <ProjectCard
-              key={project.title}
-              project={project}
+        {featuredProject && (
+          <div className="md:col-span-2">
+            <FeaturedProjectCard
+              project={featuredProject}
             />
-          )
+          </div>
         )}
+
+        {regularProjects.map((project) => (
+          <div
+            key={project.title}
+            className={
+              hasSingleRegularProject
+                ? "md:col-span-2 flex justify-center"
+                : ""
+            }
+          >
+            <div
+              className={
+                hasSingleRegularProject
+                  ? "w-full max-w-lg"
+                  : ""
+              }
+            >
+              <ProjectCard project={project} />
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
   );

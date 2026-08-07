@@ -42,7 +42,9 @@ export const profile: Profile = {
   experience: [
     {
       position: "Full Stack Developer",
+
       company: "Freelance",
+
       location: "Remote",
 
       startDate: "2025",
@@ -61,6 +63,7 @@ export const profile: Profile = {
         "PostgreSQL",
       ],
     },
+
     {
       position: "Frontend Developer",
 
@@ -105,6 +108,10 @@ export const profile: Profile = {
       image: "",
 
       featured: true,
+
+      status: "In Progress",
+
+      period: "2026",
     },
 
     {
@@ -125,6 +132,10 @@ export const profile: Profile = {
       image: "",
 
       featured: false,
+
+      status: "Completed",
+
+      period: "2026",
     },
   ],
 };
