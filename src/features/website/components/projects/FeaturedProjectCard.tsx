@@ -12,6 +12,7 @@ import {
 
 import { websiteContent } from "../../content/website-content";
 import type { Project } from "../../profile/types";
+import { ProjectMeta } from "./ProjectMeta";
 
 interface FeaturedProjectCardProps {
   project: Project;
@@ -75,6 +76,11 @@ export function FeaturedProjectCard({
           >
             {project.title}
           </Typography>
+
+          <ProjectMeta
+            period={project.period}
+            status={project.status}
+          />
 
           <Typography
             variant="body"

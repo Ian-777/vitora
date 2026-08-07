@@ -14,6 +14,7 @@ import { cn } from "@/shared/utils";
 
 import { websiteContent } from "../../content/website-content";
 import type { Project } from "../../profile/types";
+import { ProjectMeta } from "./ProjectMeta";
 
 interface ProjectCardProps {
   project: Project;
@@ -78,9 +79,14 @@ export function ProjectCard({
         {project.title}
       </Typography>
 
+      <ProjectMeta
+        period={project.period}
+        status={project.status}
+      />
+
       <Typography
         variant="body"
-        className="mt-3 flex-1"
+        className="mt-4 flex-1"
       >
         {project.description}
       </Typography>
