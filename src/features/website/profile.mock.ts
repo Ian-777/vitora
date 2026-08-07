@@ -88,6 +88,50 @@ export const profile: Profile = {
     },
   ],
 
+    education: [
+    {
+      degree: "Software Engineering",
+
+      institution: "Corporación Unificada Nacional de Educación Superior (CUN)",
+
+      startDate: "2024",
+
+      endDate: undefined,
+
+      current: true,
+
+      description:
+        "Currently pursuing a Software Engineering degree while strengthening my knowledge in software architecture, databases and full stack web development.",
+
+      subjects: [
+        "Java",
+        "SQL",
+        "Software Engineering",
+      ],
+    },
+
+    {
+      degree: "Software Analysis and Development",
+
+      institution: "SENA",
+
+      startDate: "2017",
+
+      endDate: "2019",
+
+      current: false,
+
+      description:
+        "Completed technical education focused on software development fundamentals, databases and programming logic.",
+
+      subjects: [
+        "Java",
+        "MySQL",
+        "Programming Fundamentals",
+      ],
+    },
+  ],
+
   projects: [
     {
       title: "Vitora",

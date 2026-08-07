@@ -1,19 +1,16 @@
 import {
   Card,
-  IconButton,
   Tag,
   Typography,
 } from "@/shared/ui";
 
-import {
-  BrandIcons,
-  UiIcons,
-} from "@/shared/icons";
-
 import { cn } from "@/shared/utils";
 
 import { websiteContent } from "../../content/website-content";
-import type { Project } from "../../profile/types";
+import type { Project } from "../../types";
+
+import { ProjectActions } from "./ProjectActions";
+import { ProjectImage } from "./ProjectImage";
 import { ProjectMeta } from "./ProjectMeta";
 
 interface ProjectCardProps {
@@ -57,22 +54,12 @@ export function ProjectCard({
         </div>
       )}
 
-      <div className="mb-6 aspect-video overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--muted)]">
-        {project.image ? (
-          <img
-            src={project.image}
-            alt={project.title}
-            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-          />
-        ) : (
-          <div className="flex h-full flex-col items-center justify-center gap-3 text-[var(--muted-foreground)]">
-            <UiIcons.image size={36} />
-
-            <Typography variant="small">
-              Project Preview
-            </Typography>
-          </div>
-        )}
+      <div className="mb-6 overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--muted)]">
+        <ProjectImage
+          project={project}
+          height="aspect-video"
+          iconSize={36}
+        />
       </div>
 
       <Typography variant="h3">
@@ -99,27 +86,12 @@ export function ProjectCard({
         ))}
       </div>
 
-      {(project.github || project.demo) && (
-        <div className="mt-6 flex gap-3 border-t border-[var(--border)] pt-5">
-          {project.github && (
-            <IconButton
-              href={project.github}
-              icon={<BrandIcons.github size={18} />}
-            >
-              GitHub
-            </IconButton>
-          )}
-
-          {project.demo && (
-            <IconButton
-              href={project.demo}
-              icon={<UiIcons.externalLink size={18} />}
-            >
-              Live Demo
-            </IconButton>
-          )}
-        </div>
-      )}
+      <div className="mt-6 border-t border-[var(--border)] pt-5">
+        <ProjectActions
+          github={project.github}
+          demo={project.demo}
+        />
+      </div>
     </Card>
   );
 }

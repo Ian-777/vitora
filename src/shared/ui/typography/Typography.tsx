@@ -7,6 +7,7 @@ const variants = {
   h3: "text-2xl font-semibold",
   body: "text-base text-[var(--text)]",
   muted: "text-base text-[var(--text-secondary)]",
+  small: "text-sm text-[var(--text-secondary)]",
 };
 
 export function Typography({

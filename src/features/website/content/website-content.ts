@@ -21,6 +21,12 @@ export const websiteContent = {
       "My professional journey and the technologies I've used.",
   },
 
+  education: {
+  title: "Education",
+  subtitle:
+    "My academic background and continuous learning journey.",
+},
+
   projects: {
   title: "Projects",
   subtitle:

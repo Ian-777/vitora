@@ -1,17 +1,14 @@
 import {
   Card,
-  IconButton,
   Tag,
   Typography,
 } from "@/shared/ui";
 
-import {
-  BrandIcons,
-  UiIcons,
-} from "@/shared/icons";
-
 import { websiteContent } from "../../content/website-content";
-import type { Project } from "../../profile/types";
+import type { Project } from "../../types";
+
+import { ProjectActions } from "./ProjectActions";
+import { ProjectImage } from "./ProjectImage";
 import { ProjectMeta } from "./ProjectMeta";
 
 interface FeaturedProjectCardProps {
@@ -45,28 +42,11 @@ export function FeaturedProjectCard({
 
       <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
         <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--muted)]">
-          {project.image ? (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="
-                h-[420px]
-                w-full
-                object-cover
-                transition-transform
-                duration-700
-                group-hover:scale-105
-              "
-            />
-          ) : (
-            <div className="flex h-[420px] flex-col items-center justify-center gap-4 text-[var(--muted-foreground)]">
-              <UiIcons.image size={72} />
-
-              <Typography variant="body">
-                Project Preview
-              </Typography>
-            </div>
-          )}
+          <ProjectImage
+            project={project}
+            height="h-[420px]"
+            iconSize={72}
+          />
         </div>
 
         <div className="flex flex-col justify-center">
@@ -97,27 +77,12 @@ export function FeaturedProjectCard({
             ))}
           </div>
 
-          {(project.github || project.demo) && (
-            <div className="mt-10 flex flex-wrap gap-3">
-              {project.github && (
-                <IconButton
-                  href={project.github}
-                  icon={<BrandIcons.github size={18} />}
-                >
-                  GitHub
-                </IconButton>
-              )}
-
-              {project.demo && (
-                <IconButton
-                  href={project.demo}
-                  icon={<UiIcons.externalLink size={18} />}
-                >
-                  Live Demo
-                </IconButton>
-              )}
-            </div>
-          )}
+          <div className="mt-10">
+            <ProjectActions
+              github={project.github}
+              demo={project.demo}
+            />
+          </div>
         </div>
       </div>
     </Card>

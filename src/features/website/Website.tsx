@@ -1,6 +1,8 @@
-import { Header } from "./components/Header";
 import { About } from "./components/About";
+import { Header } from "./components/Header";
 import { Skills } from "./components/Skills";
+
+import { Education } from "./components/education";
 import { Experience } from "./components/experience";
 import { Projects } from "./components/projects";
 
@@ -14,6 +16,8 @@ export function Website() {
       <Skills />
 
       <Experience />
+
+      <Education />
 
       <Projects />
     </main>

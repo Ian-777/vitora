@@ -1,6 +1,6 @@
 import { Typography } from "@/shared/ui";
 
-import type { ProjectStatus } from "../../profile/types";
+import type { ProjectStatus } from "../../types";
 
 interface ProjectMetaProps {
   period: string;

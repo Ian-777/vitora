@@ -23,6 +23,22 @@ export interface Experience {
   technologies: string[];
 }
 
+export interface Education {
+  degree: string;
+
+  institution: string;
+
+  startDate: string;
+
+  endDate?: string;
+
+  current: boolean;
+
+  description: string;
+
+  subjects: string[];
+}
+
 export interface Project {
   title: string;
 
@@ -59,6 +75,8 @@ export interface Profile {
   skills: string[];
 
   experience: Experience[];
+
+  education: Education[];
 
   projects: Project[];
 }
